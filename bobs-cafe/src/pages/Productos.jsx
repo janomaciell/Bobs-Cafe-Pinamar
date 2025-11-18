@@ -194,20 +194,13 @@ const Productos = () => {
       {/* Hero Section */}
       <section className="productos-hero-section">
         <div className="productos-hero-content">
-          <div className="productos-hero-tag">🍽️ Nuestro Menú</div>
-          <h1 className="productos-hero-title">
-            Sabores que Enamoran
-          </h1>
-          <p className="productos-hero-description">
-            Cada producto preparado con amor y los mejores ingredientes. 
-            Desde waffles artesanales hasta café de especialidad.
-          </p>
+          <h1 className="productos-hero-title">Menú</h1>
         </div>
       </section>
 
       {/* Menu Section */}
       <section className="productos-menu-section">
-        <div className="menu-grid">
+        <div className="menu-list">
           {menuData.map((seccion, index) => (
             <div key={index} className="producto-categoria">
               <h2 className="categoria-title">{seccion.categoria}</h2>
@@ -244,16 +237,6 @@ const Productos = () => {
               )}
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Final Section */}
-      <section className="productos-final-section">
-        <div className="productos-final-container">
-          <p className="productos-final-text">
-            Todo preparado con ingredientes premium y la pasión 
-            que nos caracteriza. Venì a probar la experiencia Bob's Café.
-          </p>
         </div>
       </section>
     </div>

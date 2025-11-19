@@ -1,5 +1,5 @@
 .footer {
-  background: var(--color-primary);
+  background-color: #f7d389;
   color: var(--color-white);
   padding: 60px 20px 20px;
 }
@@ -16,19 +16,19 @@
 .footer-section h3 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--color-cream);
+  color: #151515;
 }
 
 .footer-section h4 {
   font-size: 20px;
   margin-bottom: 20px;
-  color: var(--color-cream);
+  color: #151515;
 }
 
 .footer-section p {
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .footer-social {
@@ -40,7 +40,7 @@
 .footer-social a {
   width: 45px;
   height: 45px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@
 }
 
 .footer-section ul li a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -73,25 +73,25 @@
 }
 
 .footer-section ul li a:hover {
-  color: var(--color-secondary);
+  color: white;
 }
 
 .footer-contact li {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 15px;
 }
 
 .footer-contact svg {
   flex-shrink: 0;
-  color: var(--color-secondary);
+  color: black;
 }
 
 .footer-hours {
   font-weight: 600;
-  color: var(--color-secondary);
+  color: black !important;  
   font-size: 18px;
   margin-top: 10px;
 }
@@ -106,7 +106,7 @@
 
 .footer-bottom p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #151515;
 }
 
 @media (max-width: 768px) {

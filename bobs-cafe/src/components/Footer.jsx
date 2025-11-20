@@ -33,10 +33,7 @@ const Footer = () => {
               <FiMapPin size={18} />
               <span>Balneario Perico, Buenos Aires</span>
             </li>
-            <li>
-              <FiPhone size={18} />
-              <span>+54 9 11 1234-5678</span>
-            </li>
+
             <li>
               <FiMail size={18} />
               <span>info@bobscafe.com.ar</span>

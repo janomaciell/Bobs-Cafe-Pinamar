@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Logo Center */}
         <Link to="/" className="navbar-logo">
           <img 
-            src="public/img/logo.png" 
+            src="/img/logo.png" 
             alt="Bob’s Café Logo" 
             className="navbar-logo-img"
           />

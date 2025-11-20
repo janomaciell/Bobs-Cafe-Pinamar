@@ -128,7 +128,7 @@ const Locales = () => {
                 <div className="local-detail-item">
                   <div>
                     <p className="detail-label">Horario</p>
-                    <p className="detail-value">7:00 AM - 11:00 PM • Todos los días</p>
+                    <p className="detail-value">7:00 - 23:00 • Todos los días</p>
                   </div>
                 </div>
 

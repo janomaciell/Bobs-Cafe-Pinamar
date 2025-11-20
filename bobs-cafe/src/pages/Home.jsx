@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../components/Hero.css';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -68,32 +70,32 @@ const Home = () => {
 
       {/* Sección de Cajas con Links */}
       <section className="text-section-home" ref={projectsRef}>
-        <div className="projects-grid">
-          <a href="/nosotros" className="project-card link-box">
-            <div className="project-placeholder" data-project="nosotros">
-              <h2 className="link-text">Nosotros</h2>
-            </div>
-          </a>
+          <div className="projects-grid">
+            <Link to="/nosotros" className="project-card link-box">
+              <div className="project-placeholder" data-project="nosotros">
+                <h2 className="link-text">Nosotros</h2>
+              </div>
+            </Link>
 
-          <a href="/productos" className="project-card link-box">
-            <div className="project-placeholder" data-project="productos">
-              <h2 className="link-text">Productos</h2>
-            </div>
-          </a>
+            <Link to="/productos" className="project-card link-box">
+              <div className="project-placeholder" data-project="productos">
+                <h2 className="link-text">Productos</h2>
+              </div>
+            </Link>
 
-          <a href="/locales" className="project-card link-box">
-            <div className="project-placeholder" data-project="locales">
-              <h2 className="link-text">Locales</h2>
-            </div>
-          </a>
+            <Link to="/locales" className="project-card link-box">
+              <div className="project-placeholder" data-project="locales">
+                <h2 className="link-text">Locales</h2>
+              </div>
+            </Link>
 
-          <a href="/trabaja" className="project-card link-box">
-            <div className="project-placeholder" data-project="trabaja">
-              <h2 className="link-text">Trabajá con Nosotros</h2>
-            </div>
-          </a>
-        </div>
-      </section>
+            <Link to="/trabaja" className="project-card link-box">
+              <div className="project-placeholder" data-project="trabaja">
+                <h2 className="link-text">Trabajá con Nosotros</h2>
+              </div>
+            </Link>
+          </div>
+        </section>
 
       {/* Info Section */}
       <section className="culture-section">

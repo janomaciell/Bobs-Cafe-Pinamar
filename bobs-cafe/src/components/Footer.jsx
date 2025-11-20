@@ -50,6 +50,17 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>&copy; 2025 Bob's Cafe. Todos los derechos reservados.</p>
+        <p className="footer-developer">
+          Desarrollado por{' '}
+          <a 
+            href="https://portfolio-jano-maciel.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="developer-link"
+          >
+            Jano Maciel
+          </a>
+        </p>
       </div>
     </footer>
   )

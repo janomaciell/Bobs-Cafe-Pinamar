@@ -107,6 +107,41 @@
 .footer-bottom p {
   font-size: 14px;
   color: #151515;
+  margin: 5px 0;
+}
+
+.footer-developer {
+  margin-top: 8px;
+  
+  
+}
+
+.developer-link {
+  color: #151515;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  
+}
+
+.developer-link:hover {
+  color: var(--color-white);
+}
+
+.developer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-white);
+  transition: width 0.3s ease;
+}
+
+.developer-link:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {

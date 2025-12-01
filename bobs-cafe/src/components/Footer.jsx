@@ -31,12 +31,12 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <FiMapPin size={18} />
-              <span>Balneario Perico, Buenos Aires</span>
+              <span>Av. Bunge 1112</span>
             </li>
 
             <li>
               <FiMail size={18} />
-              <span>info@bobscafe.com.ar</span>
+              <span>bobspinamar@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Horarios</h4>
           <p>Lunes a Domingo</p>
-          <p className="footer-hours">9:00 - 20:00</p>
+          <p className="footer-hours">7:00 - 22:00</p>
         </div>
       </div>
 

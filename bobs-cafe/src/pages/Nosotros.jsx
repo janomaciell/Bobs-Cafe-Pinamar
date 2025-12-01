@@ -11,6 +11,7 @@ const Nosotros = () => {
   const imageRef = useRef(null);
   const valoresRef = useRef(null);
   const historiaSectionRef = useRef(null);
+  const misionVisionRef = useRef(null);
 
   useEffect(() => {
     // Animación simple del hero (sin efecto de escritura)
@@ -28,8 +29,6 @@ const Nosotros = () => {
         }
       }
     );
-
-
 
     // Animación de la imagen que crece con scroll
     if (imageRef.current) {
@@ -67,27 +66,38 @@ const Nosotros = () => {
       );
     });
 
+    // Animación de Misión y Visión
+    const misionVisionCards = misionVisionRef.current?.querySelectorAll('.mision-vision-card');
+    misionVisionCards?.forEach((card, index) => {
+      gsap.fromTo(card,
+        { opacity: 0, x: index === 0 ? -50 : 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+
     // Animación de escritura palabra por palabra en "Nuestra Historia"
     if (historiaSectionRef.current) {
-      // Obtener el título y todos los párrafos
       const sectionTitle = historiaSectionRef.current.querySelector('.section-title');
       const paragraphs = historiaSectionRef.current.querySelectorAll('.historia-text p');
       
-      // Función para animar palabras de un elemento preservando HTML
       const animateWords = (element, startPercent, endPercent, triggerElement) => {
         if (!element) return;
         
-        // Obtener el texto completo y dividir en palabras
         const text = element.textContent || element.innerText;
         const words = text.split(/\s+/).filter(word => word.length > 0);
-        
-        // Guardar el HTML original para preservar elementos como <strong>
         const originalHTML = element.innerHTML;
         
-        // Limpiar y reconstruir con spans para cada palabra
         element.innerHTML = '';
         
-        // Dividir el HTML original en palabras pero preservar tags
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = originalHTML;
         const textNodes = [];
@@ -106,12 +116,10 @@ const Nosotros = () => {
         
         extractTextNodes(tempDiv);
         
-        // Reconstruir con spans para cada palabra
         words.forEach((word, index) => {
           const wordSpan = document.createElement('span');
           wordSpan.className = 'historia-word';
           
-          // Buscar si esta palabra está dentro de un tag especial
           const wordInOriginal = originalHTML.includes(`<strong>${word}</strong>`) || 
                                    originalHTML.includes(`<strong>${word} `);
           
@@ -131,14 +139,12 @@ const Nosotros = () => {
         const wordElements = element.querySelectorAll('.historia-word');
         const totalWords = wordElements.length;
         
-        // Inicializar palabras como invisibles
         gsap.set(wordElements, {
           opacity: 0,
           y: 60,
           display: 'inline-block'
         });
         
-        // Animar cada palabra individualmente
         wordElements.forEach((word, index) => {
           const wordScrollPortion = (startPercent - endPercent) / totalWords;
           const wordStart = startPercent - (index * wordScrollPortion);
@@ -164,12 +170,10 @@ const Nosotros = () => {
         });
       };
       
-      // Animar el título "Nuestra Historia"
       if (sectionTitle) {
         animateWords(sectionTitle, 90, 70, historiaSectionRef.current);
       }
       
-      // Animar cada párrafo palabra por palabra
       paragraphs.forEach((p, pIndex) => {
         const paragraphStart = 85 - (pIndex * 15);
         const paragraphEnd = paragraphStart - 12;
@@ -224,24 +228,22 @@ const Nosotros = () => {
           
           <div className="historia-text">
             <p>
+              El nombre <strong>Bob's</strong> es la abreviación de la palabra 
+              "better on the beach", haciendo la ilusión que los orígenes de la marca 
+              son en la costa Argentina.
+            </p>
+            <p>
               Todo comenzó en <strong>Balneario Perico</strong>, donde la pasión por crear 
-              los mejores waffles artesanales se encontró con el espíritu playero y fresco 
-              de la costa.
+              los mejores waffles artesanales se encontró con el espíritu playero y la 
+              esencia de Pinamar.
             </p>
             <p>
-              En Bob's Café, cada waffle es una obra de arte. Preparados con ingredientes 
-              de primera calidad y mucho amor, nuestros waffles son el corazón de lo que hacemos. 
-              Pero no nos detuvimos ahí.
+              Luego nos dimos cuenta que el café es el mejor complemento y lo implementamos 
+              para darle una experiencia completa a nuestros clientes.
             </p>
             <p>
-              Hemos expandido nuestra propuesta para ofrecerte una experiencia completa: 
-              medialunas artesanales, café de especialidad, té selectos y las mejores bebidas 
-              sin alcohol de Coca-Cola.
-            </p>
-            <p>
-              Somos más que una cafetería. Somos un lugar donde las vibras de playa se 
-              encuentran con el sabor casero, donde cada visita te transporta a esos días 
-              soleados junto al mar.
+              Seguimos haciendo lo que nos apasiona y formando una comunidad que nos elige 
+              constantemente.
             </p>
           </div>
         </div>
@@ -253,44 +255,49 @@ const Nosotros = () => {
         
         <div className="valores-grid">
           <div className="value-card">
-            <h3 className="value-title">Artesanal</h3>
-            <p className="value-description">
-              Cada producto hecho con dedicación y los mejores ingredientes
-            </p>
-          </div>
-
-          <div className="value-card">
-            <h3 className="value-title">Vibras Playeras</h3>
-            <p className="value-description">
-              Traemos la frescura del balneario a cada rincón
-            </p>
-          </div>
-
-          <div className="value-card">
-            <h3 className="value-title">Calidad Premium</h3>
-            <p className="value-description">
-              Desde el café hasta las bebidas, solo lo mejor
-            </p>
-          </div>
-
-          <div className="value-card">
             <h3 className="value-title">Pasión</h3>
             <p className="value-description">
-              Amamos lo que hacemos y se nota en cada detalle
-            </p>
-          </div>
-
-          <div className="value-card">
-            <h3 className="value-title">Ambiente Único</h3>
-            <p className="value-description">
-              Pasto en las paredes y diseño que conecta con la naturaleza
+              Transmitimos la excelencia del café y el waffle
             </p>
           </div>
 
           <div className="value-card">
             <h3 className="value-title">Comunidad</h3>
             <p className="value-description">
-              Creamos momentos y conexiones que duran
+              Creamos una manera de vivir experiencias
+            </p>
+          </div>
+
+          <div className="value-card">
+            <h3 className="value-title">Ambiente Único</h3>
+            <p className="value-description">
+              Nuestros espacios reflejan la esencia de Pinamar
+            </p>
+          </div>
+
+          <div className="value-card">
+            <h3 className="value-title">Artesanal</h3>
+            <p className="value-description">
+              Cada producto es elaborado con materias primas seleccionadas
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Misión y Visión Section */}
+      <section className="mision-vision-section" ref={misionVisionRef}>
+        <div className="mision-vision-container">
+          <div className="mision-vision-card">
+            <h3 className="mision-vision-title">Misión</h3>
+            <p className="mision-vision-description">
+              Lograr que cada momento sea único
+            </p>
+          </div>
+
+          <div className="mision-vision-card">
+            <h3 className="mision-vision-title">Visión</h3>
+            <p className="mision-vision-description">
+              Formar una comunidad y un estilo de vivir
             </p>
           </div>
         </div>
@@ -300,8 +307,9 @@ const Nosotros = () => {
       <section className="nosotros-final-section">
         <div className="nosotros-final-container">
           <p className="nosotros-final-text">
-            Cada taza, cada waffle, cada momento en Bob's Café está diseñado 
-            para que disfrutes de lo simple hecho extraordinario.
+            Si quieres consumir waffles y café 
+            <br />
+            <strong>Is Better On the Beach</strong>
           </p>
         </div>
       </section>

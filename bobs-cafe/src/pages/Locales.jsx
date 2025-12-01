@@ -102,7 +102,7 @@ const Locales = () => {
             {splitTextIntoWords('Nuestros Locales')}
           </h1>
           <p className="locales-hero-description">
-            Dos espacios únicos en Pinamar para disfrutar de la mejor experiencia
+            Dos espacios únicos en Pinamar para vivir distintas experiencias
           </p>
         </div>
       </section>
@@ -115,13 +115,13 @@ const Locales = () => {
           <div className="local-card">
             <div className="local-content">
               <div className="local-header">
-                <h2 className="local-title">Bob's Café Bunge</h2>
+                <h2 className="local-title">Bob's Café Centro</h2>
                 <span className="local-badge">Sucursal Principal</span>
               </div>
               
               <p className="local-description">
-                Nuestro local oficial en el centro de Pinamar, en Av. Bunge. Un espacio cálido y acogedor 
-                con pasto en las paredes, sillones elegantes y la mejor carta de café y waffles de Pinamar.
+                Nuestro local oficial se encuentra en el centro de Pinamar, en Av. Bunge. 
+                Un espacio acogedor donde compartimos lo que más nos gusta hacer.
               </p>
 
               <div className="local-details">
@@ -162,17 +162,17 @@ const Locales = () => {
             </div>
           </div>
 
-          {/* Local 2: Balneario Perico */}
+          {/* Local 2: Bob's Beach */}
           <div className="local-card">
             <div className="local-content">
               <div className="local-header">
-                <h2 className="local-title">Balneario Perico</h2>
+                <h2 className="local-title">Bob's Beach</h2>
                 <span className="local-badge">Chiringo de Playa</span>
               </div>
               
               <p className="local-description">
-                Disfrutá de Bob's Café frente al mar. Nuestro chiringo en el Balneario Perico 
-                es el lugar perfecto para disfrutar waffles con vista a la costa.
+                Para revivir los orígenes de la marca, experimenta nuestra versión exclusiva 
+                de waffles frente al mar.
               </p>
 
               <div className="local-details">
@@ -193,7 +193,7 @@ const Locales = () => {
                 <div className="local-detail-item">
                   <div>
                     <p className="detail-label">Horario</p>
-                    <p className="detail-value">9:00 AM - 8:00 PM • Temporada de verano</p>
+                    <p className="detail-value">12:30 PM - 8:00 PM • Temporada de verano</p>
                   </div>
                 </div>
               </div>
@@ -220,8 +220,7 @@ const Locales = () => {
       <section className="locales-info-section">
         <div className="locales-info-container">
           <p className="locales-info-text">
-            Te esperamos en cualquiera de nuestros espacios para compartir 
-            un momento único con café de especialidad y waffles artesanales.
+            Te esperamos en cualquiera de nuestros espacios para compartir un momento único
           </p>
         </div>
       </section>

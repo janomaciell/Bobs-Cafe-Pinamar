@@ -212,8 +212,7 @@ const Trabaja = () => {
       <section className="trabaja-info-section">
         <div className="trabaja-info-content">
           <p className="info-text">
-            Buscamos personas apasionadas que quieran formar parte de una experiencia única.
-          </p>
+          Buscamos personas apasionadas que quieran compartir nuestros valores          </p>
         </div>
       </section>
     </div>

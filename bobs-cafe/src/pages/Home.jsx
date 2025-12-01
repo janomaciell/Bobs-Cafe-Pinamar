@@ -39,8 +39,7 @@ const Home = () => {
           <div className="hero-right">
             {/* Texto a la izquierda del waffle */}
             <div className="hero-side-text left">
-              <p>Sabor auténtico</p>
-              <p>Momentos únicos</p>
+              <p>Ahora con café</p>
             </div>
             
             <img 
@@ -51,8 +50,7 @@ const Home = () => {
             
             {/* Texto a la derecha del waffle */}
             <div className="hero-side-text right">
-              <p>Café de calidad</p>
-              <p>Ambiente natural</p>
+              <p>Experiencia única</p>
             </div>
           </div>
         </div>
@@ -60,10 +58,10 @@ const Home = () => {
       </section>
       <section className="hero-bottom-text">
         <div className="hero-content-split">
-          <p>
-            En Bob's Café creemos en los pequeños momentos que hacen grande el día. 
-            Cada taza, cada waffle y cada charla están pensados para que disfrutes 
-            una experiencia única.
+          <h2 className="hero-main-slogan">VIVÍ PINAMAR, VIVÍ BOB'S</h2>
+          <p className="hero-secondary-text">
+            En Bob's creemos en los pequeños momentos que hacen grande el día. 
+            Cada taza y cada waffle están hechos de manera artesanal.
           </p>
         </div>
       </section>
@@ -101,9 +99,8 @@ const Home = () => {
       <section className="culture-section">
         <div className="culture-container">
           <p className="culture-text">
-            En Bob's Café creemos en los pequeños momentos que hacen grande el día. 
-            Cada taza, cada waffle y cada charla están pensados para que disfrutes 
-            una experiencia única, en un entorno donde la naturaleza y el diseño se combinan.
+            Compartimos nuestra pasión por el café y los waffles. Elaboramos productos 
+            con materias primas seleccionadas.
           </p>
           <div className="culture-image-container">
             <img src="/img/waffleoreo.png" alt="Bob's Café" className="culture-image" />

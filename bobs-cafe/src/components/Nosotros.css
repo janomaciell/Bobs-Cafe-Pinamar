@@ -175,6 +175,128 @@
   gap: var(--spacing-lg);
 }
 
+/* Sección Misión y Visión */
+.mision-vision-section {
+  padding: 120px 5%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.mision-vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: stretch;
+}
+
+.mision-vision-card {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mision-vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #feca57);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.mision-vision-card:hover::before {
+  transform: scaleX(1);
+}
+
+.mision-vision-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.mision-vision-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.mision-vision-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #feca57);
+  border-radius: 2px;
+}
+
+.mision-vision-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #636e72;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .mision-vision-section {
+    padding: 80px 5%;
+  }
+
+  .mision-vision-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mision-vision-card {
+    padding: 50px 30px;
+  }
+
+  .mision-vision-title {
+    font-size: 2rem;
+  }
+
+  .mision-vision-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mision-vision-section {
+    padding: 60px 5%;
+  }
+
+  .mision-vision-card {
+    padding: 40px 25px;
+  }
+
+  .mision-vision-title {
+    font-size: 1.8rem;
+  }
+
+  .mision-vision-description {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+}
+
 .value-card {
   padding: var(--spacing-lg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

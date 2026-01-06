@@ -54,7 +54,7 @@
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #2d3436;
+  color: #000000;
   margin-bottom: 30px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.5px;
@@ -65,7 +65,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 25px;
-  color: #2d3436;
+  color: #000000; 
   letter-spacing: -0.03em;
 }
 
@@ -133,9 +133,9 @@
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   text-align: center;
+  color: #000000; 
   margin-bottom: 80px;
   letter-spacing: -0.02em;
-  color: #2d3436;
 }
 
 .categories-grid {
@@ -163,8 +163,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: #feca57;
-  transform: scaleX(0);
+  background: #f7d389;  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
 }
@@ -194,14 +193,13 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #2d3436;
   letter-spacing: -0.01em;
 }
 
 .category-divider {
   width: 50px;
   height: 3px;
-  background: #feca57;
+  background: #f7d389;
   margin-bottom: 25px;
   border-radius: 2px;
 }
@@ -246,7 +244,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: #feca57;
+  background: #f7d389;    
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -289,7 +287,6 @@
 .featured-title {
   font-size: 2.2rem;
   font-weight: 600;
-  color: #2d3436;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
 }
@@ -337,7 +334,6 @@
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #2d3436;
   margin-bottom: 25px;
   border: 2px solid rgba(255, 107, 107, 0.2);
 }
@@ -347,7 +343,6 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 25px;
-  color: #2d3436;
   letter-spacing: -0.02em;
 }
 
@@ -369,7 +364,6 @@
   align-items: center;
   gap: 12px;
   font-size: 1.05rem;
-  color: #2d3436;
 }
 
 .feature-icon {
@@ -397,29 +391,11 @@
   position: relative;
   padding: 30px;
   background: white;
-  border-radius: 30px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
 }
 
-.qr-wrapper:hover {
-  transform: scale(1.05);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
-}
 
-.qr-glow {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: #f7d389;
-  border-radius: 35px;
-  opacity: 0.3;
-  filter: blur(20px);
-  z-index: -1;
-  animation: pulse 3s ease-in-out infinite;
-}
 
 @keyframes pulse {
   0%, 100% {
@@ -437,7 +413,6 @@
   max-width: 350px;
   height: auto;
   display: block;
-  border-radius: 20px;
 }
 
 .qr-instruction {
@@ -446,7 +421,6 @@
   gap: 10px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2d3436;
 }
 
 .scan-icon {

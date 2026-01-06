@@ -255,28 +255,36 @@ const Nosotros = () => {
         
         <div className="valores-grid">
           <div className="value-card">
+            <div className="value-number">01</div>
             <h3 className="value-title">Pasión</h3>
+            <div className="value-divider"></div>
             <p className="value-description">
               Transmitimos la excelencia del café y el waffle
             </p>
           </div>
 
           <div className="value-card">
+            <div className="value-number">02</div>
             <h3 className="value-title">Comunidad</h3>
+            <div className="value-divider"></div>
             <p className="value-description">
               Creamos una manera de vivir experiencias
             </p>
           </div>
 
           <div className="value-card">
+            <div className="value-number">03</div>
             <h3 className="value-title">Ambiente Único</h3>
+            <div className="value-divider"></div>
             <p className="value-description">
               Nuestros espacios reflejan la esencia de Pinamar
             </p>
           </div>
 
           <div className="value-card">
+            <div className="value-number">04</div>
             <h3 className="value-title">Artesanal</h3>
+            <div className="value-divider"></div>
             <p className="value-description">
               Cada producto es elaborado con materias primas seleccionadas
             </p>
@@ -286,16 +294,21 @@ const Nosotros = () => {
 
       {/* Misión y Visión Section */}
       <section className="mision-vision-section" ref={misionVisionRef}>
+        <h2 className="section-title-center">Nuestro Propósito</h2>
         <div className="mision-vision-container">
           <div className="mision-vision-card">
+            <div className="mision-vision-number">01</div>
             <h3 className="mision-vision-title">Misión</h3>
+            <div className="mision-vision-divider"></div>
             <p className="mision-vision-description">
               Lograr que cada momento sea único
             </p>
           </div>
 
           <div className="mision-vision-card">
+            <div className="mision-vision-number">02</div>
             <h3 className="mision-vision-title">Visión</h3>
+            <div className="mision-vision-divider"></div>
             <p className="mision-vision-description">
               Formar una comunidad y un estilo de vivir
             </p>

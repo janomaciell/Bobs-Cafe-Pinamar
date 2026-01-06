@@ -39,7 +39,8 @@ const Home = () => {
           <div className="hero-right">
             {/* Texto a la izquierda del waffle */}
             <div className="hero-side-text left">
-              <p>Ahora con café</p>
+                <p>Experiencia única</p>
+
             </div>
             
             <img 
@@ -50,7 +51,8 @@ const Home = () => {
             
             {/* Texto a la derecha del waffle */}
             <div className="hero-side-text right">
-              <p>Experiencia única</p>
+              <p>Ahora con café</p>
+
             </div>
           </div>
         </div>
@@ -58,7 +60,6 @@ const Home = () => {
       </section>
       <section className="hero-bottom-text">
         <div className="hero-content-split">
-          <h2 className="hero-main-slogan">VIVÍ PINAMAR, VIVÍ BOB'S</h2>
           <p className="hero-secondary-text">
             En Bob's creemos en los pequeños momentos que hacen grande el día. 
             Cada taza y cada waffle están hechos de manera artesanal.

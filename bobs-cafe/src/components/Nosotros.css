@@ -145,40 +145,108 @@
 }
 
 .historia-text strong {
-  color: black
-  ;
+  color: black;
   font-weight: 600;
 }
 
-/* Valores Section */
+/* Valores Section - Mejorado */
 .nosotros-valores-section {
   min-height: 100vh;
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: 120px 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #f7d389;
 }
 
 .section-title-center {
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 80px;
   letter-spacing: -0.02em;
+  color: #2d3436;
 }
 
 .valores-grid {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
-/* Sección Misión y Visión */
+.value-card {
+  background: white;
+  padding: 50px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #feca57;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.value-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: #feca57;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.value-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2d3436;
+  letter-spacing: -0.01em;
+}
+
+.value-divider {
+  width: 50px;
+  height: 3px;
+  background: #feca57;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.value-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #636e72;
+  font-weight: 400;
+}
+
+/* Sección Misión y Visión - Mejorada */
 .mision-vision-section {
   padding: 120px 5%;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: white;
   position: relative;
 }
 
@@ -192,14 +260,12 @@
 }
 
 .mision-vision-card {
-  background: white;
-  padding: 60px 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 60px 45px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
+  border-top: 3px solid transparent;
 }
 
 .mision-vision-card::before {
@@ -208,8 +274,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #ff6b6b, #feca57);
+  height: 3px;
+  background: #feca57;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -221,105 +287,42 @@
 
 .mision-vision-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.mision-vision-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: #feca57;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  line-height: 1;
 }
 
 .mision-vision-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   color: #2d3436;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
-  position: relative;
-  display: inline-block;
 }
 
-.mision-vision-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+.mision-vision-divider {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #ff6b6b, #feca57);
+  background: #feca57;
+  margin-bottom: 30px;
   border-radius: 2px;
 }
 
 .mision-vision-description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #636e72;
   font-weight: 400;
-  margin-top: 40px;
-}
-
-/* Responsive */
-@media (max-width: 968px) {
-  .mision-vision-section {
-    padding: 80px 5%;
-  }
-
-  .mision-vision-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .mision-vision-card {
-    padding: 50px 30px;
-  }
-
-  .mision-vision-title {
-    font-size: 2rem;
-  }
-
-  .mision-vision-description {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .mision-vision-section {
-    padding: 60px 5%;
-  }
-
-  .mision-vision-card {
-    padding: 40px 25px;
-  }
-
-  .mision-vision-title {
-    font-size: 1.8rem;
-  }
-
-  .mision-vision-description {
-    font-size: 1rem;
-    margin-top: 30px;
-  }
-}
-
-.value-card {
-  padding: var(--spacing-lg);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.value-card:hover {
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-.value-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.01em;
-}
-
-.value-description {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
-  color: var(--color-text-secondary);
-  font-weight: 300;
 }
 
 /* Final Section */
@@ -329,6 +332,9 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xl) var(--spacing-md);
+  background: #f7d389;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 
 .nosotros-final-container {
@@ -344,9 +350,32 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+  
+  .value-card {
+    padding: 45px 30px;
+  }
+}
+
 @media (max-width: 1024px) {
   .scroll-line-container {
     left: 30px;
+  }
+  
+  .mision-vision-section {
+    padding: 100px 5%;
+  }
+
+  .mision-vision-container {
+    gap: 45px;
+  }
+
+  .mision-vision-card {
+    padding: 50px 35px;
   }
 }
 
@@ -355,15 +384,46 @@
     display: none;
   }
 
-
-
   .valores-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: 30px;
+  }
+
+  .value-card {
+    padding: 40px 30px;
   }
 
   .historia-text {
     gap: var(--spacing-md);
+  }
+  
+  .nosotros-valores-section {
+    padding: 80px 5%;
+  }
+
+  .section-title-center {
+    margin-bottom: 50px;
+  }
+  
+  .mision-vision-section {
+    padding: 80px 5%;
+  }
+
+  .mision-vision-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mision-vision-card {
+    padding: 45px 30px;
+  }
+
+  .mision-vision-title {
+    font-size: 2rem;
+  }
+
+  .mision-vision-description {
+    font-size: 1.1rem;
   }
 }
 
@@ -383,5 +443,45 @@
 
   .nosotros-final-text {
     font-size: 1.5rem;
+  }
+  
+  .value-card {
+    padding: 35px 25px;
+  }
+  
+  .value-number {
+    font-size: 2.5rem;
+  }
+  
+  .value-title {
+    font-size: 1.5rem;
+  }
+  
+  .value-description {
+    font-size: 1rem;
+  }
+  
+  .nosotros-valores-section {
+    padding: 60px 5%;
+  }
+  
+  .mision-vision-section {
+    padding: 60px 5%;
+  }
+
+  .mision-vision-card {
+    padding: 40px 25px;
+  }
+  
+  .mision-vision-number {
+    font-size: 2.5rem;
+  }
+
+  .mision-vision-title {
+    font-size: 1.8rem;
+  }
+
+  .mision-vision-description {
+    font-size: 1rem;
   }
 }

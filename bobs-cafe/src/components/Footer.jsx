@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Bob's Cafe</h3>
-          <p>Waffles artesanales y café con vibras de playa</p>
+          <p>VIVÍ PINAMAR, VIVÍ BOB'S</p>
           <div className="footer-social">
             <a href="https://www.instagram.com/bobscafe.ar/" target="_blank" rel="noopener noreferrer">
               <FiInstagram size={24} />

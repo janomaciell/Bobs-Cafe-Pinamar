@@ -141,8 +141,8 @@ const Productos = () => {
       number: '02'
     },
     {
-      name: 'Smoothie Bowl',
-      description: 'Fresco y nutritivo para cualquier momento',
+      name: 'Scone de queso',
+      description: 'Producto unico horneado todos los días',
       badge: 'Nuevo',
       number: '03'
     }
@@ -237,11 +237,13 @@ const Productos = () => {
           <div className="qr-image-container">
             <div className="qr-wrapper">
               <div className="qr-glow"></div>
-              <img 
-                src="/img/qr_menu.jpeg" 
-                alt="QR Code para ver el menú digital" 
-                className="qr-image"
-              />
+              <Link to="/menu">
+                  <img 
+                    src="/img/qr_menu.jpeg" 
+                    alt="QR Code para ver el menú digital" 
+                    className="qr-image"
+                  />
+              </Link>
             </div>
             <p className="qr-instruction">
               Apunta tu cámara aquí

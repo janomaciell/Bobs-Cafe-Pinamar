@@ -72,12 +72,14 @@ const Home = () => {
           <div className="projects-grid">
             <Link to="/nosotros" className="project-card link-box">
               <div className="project-placeholder" data-project="nosotros">
+                {/* Para agregar imagen: <img src="/img/nosotros.jpeg" alt="Nosotros" className="project-image" /> */}
                 <h2 className="link-text">Nosotros</h2>
               </div>
             </Link>
 
             <Link to="/productos" className="project-card link-box">
               <div className="project-placeholder" data-project="productos">
+                {/* Para agregar imagen: <img src="/img/productos.jpeg" alt="Productos" className="project-image" /> */}
                 <h2 className="link-text">Productos</h2>
               </div>
             </Link>
@@ -85,11 +87,14 @@ const Home = () => {
             <Link to="/locales" className="project-card link-box">
               <div className="project-placeholder" data-project="locales">
                 <h2 className="link-text">Locales</h2>
+                <img src="/img/locales.jpeg" alt="Locales" className="project-image" />
+
               </div>
             </Link>
 
             <Link to="/trabaja" className="project-card link-box">
               <div className="project-placeholder" data-project="trabaja">
+                {/* Para agregar imagen: <img src="/img/trabaja.jpeg" alt="Trabajá con Nosotros" className="project-image" /> */}
                 <h2 className="link-text">Trabajá con Nosotros</h2>
               </div>
             </Link>

@@ -12,6 +12,7 @@ const Nosotros = () => {
   const valoresRef = useRef(null);
   const historiaSectionRef = useRef(null);
   const misionVisionRef = useRef(null);
+  const ownerRef = useRef(null);
 
   useEffect(() => {
     // Animación simple del hero (sin efecto de escritura)
@@ -84,6 +85,54 @@ const Nosotros = () => {
       );
     });
 
+    // Animación Owner Section
+    if (ownerRef.current) {
+      const ownerImg = ownerRef.current.querySelector('.owner-photo-wrap');
+      const ownerContent = ownerRef.current.querySelector('.owner-content');
+      const ownerTag = ownerRef.current.querySelector('.owner-tag');
+      const ownerName = ownerRef.current.querySelector('.owner-name');
+      const ownerLines = ownerRef.current.querySelectorAll('.owner-bio p');
+      const ownerBadge = ownerRef.current.querySelector('.owner-birthday-badge');
+
+      gsap.fromTo(ownerImg,
+        { opacity: 0, x: -60, scale: 0.95 },
+        {
+          opacity: 1, x: 0, scale: 1, duration: 1.1, ease: 'power3.out',
+          scrollTrigger: { trigger: ownerRef.current, start: 'top 75%', toggleActions: 'play none none reverse' }
+        }
+      );
+      gsap.fromTo(ownerTag,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power2.out',
+          scrollTrigger: { trigger: ownerRef.current, start: 'top 75%', toggleActions: 'play none none reverse' }
+        }
+      );
+      gsap.fromTo(ownerName,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.8, delay: 0.35, ease: 'power3.out',
+          scrollTrigger: { trigger: ownerRef.current, start: 'top 75%', toggleActions: 'play none none reverse' }
+        }
+      );
+      ownerLines.forEach((line, i) => {
+        gsap.fromTo(line,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1, y: 0, duration: 0.7, delay: 0.5 + i * 0.15, ease: 'power2.out',
+            scrollTrigger: { trigger: ownerRef.current, start: 'top 75%', toggleActions: 'play none none reverse' }
+          }
+        );
+      });
+      gsap.fromTo(ownerBadge,
+        { opacity: 0, scale: 0.8, rotate: -6 },
+        {
+          opacity: 1, scale: 1, rotate: -3, duration: 0.7, delay: 1, ease: 'back.out(1.7)',
+          scrollTrigger: { trigger: ownerRef.current, start: 'top 75%', toggleActions: 'play none none reverse' }
+        }
+      );
+    }
+
     // Animación de escritura palabra por palabra en "Nuestra Historia"
     if (historiaSectionRef.current) {
       const sectionTitle = historiaSectionRef.current.querySelector('.section-title');
@@ -151,10 +200,7 @@ const Nosotros = () => {
           const wordEnd = wordStart - wordScrollPortion;
           
           gsap.fromTo(word,
-            {
-              opacity: 0,
-              y: 40
-            },
+            { opacity: 0, y: 40 },
             {
               opacity: 1,
               y: 0,
@@ -246,6 +292,46 @@ const Nosotros = () => {
               constantemente.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Owner Section — Juany Frey */}
+      <section className="owner-section-new" ref={ownerRef}>
+        <div className="owner-inner">
+
+          <div className="owner-photo-wrap">
+            <div className="owner-photo-frame">
+              <img 
+                src="/img/juani.jpeg" 
+                alt="Juany Frey, fundador de Bob's Café" 
+                className="owner-photo"
+              />
+            </div>
+            <div className="owner-photo-deco">B</div>
+          </div>
+
+          <div className="owner-content">
+            <span className="owner-tag">El hombre detrás del café</span>
+            <h2 className="owner-name">Juani Frey</h2>
+
+            <div className="owner-bio">
+              <p>
+                Con solo 20 años, Juani tomó la decisión más valiente de su vida: abrir su propia cafetería en Pinamar. No fue fácil — fue meses de trabajo, inversión y una ilusión enorme que hoy se transforma en cada waffle y cada taza de café que sale de Bob's.
+              </p>
+              <p>
+                Juani no solo abrió un local. Creó un espacio donde la gente se siente bien, donde la playa y el buen gusto se mezclan, y donde cada cliente se va con ganas de volver. Eso no se improvisa: es pasión pura.
+              </p>
+              <p>
+                Hoy Bob's Café es su sueño hecho realidad — y recién está empezando.
+              </p>
+            </div>
+
+            <div className="owner-birthday-badge">
+              <span className="badge-icon">🎂</span>
+              <span className="badge-text">10 de junio</span>
+            </div>
+          </div>
+
         </div>
       </section>
 

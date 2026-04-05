@@ -149,6 +149,238 @@
   font-weight: 600;
 }
 
+/* ========================
+   OWNER SECTION — JUANY
+   ======================== */
+
+.owner-section-new {
+  background: #fdf8ee;
+  padding: 120px 6%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo decorativo sutil */
+.owner-section-new::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 211, 137, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.owner-section-new::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 211, 137, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.owner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Foto */
+.owner-photo-wrap {
+  position: relative;
+}
+
+.owner-photo-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 3/4;
+}
+
+.owner-photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(247, 211, 137, 0.3) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.owner-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.owner-photo-frame:hover .owner-photo {
+  transform: scale(1.04);
+}
+
+/* Gran letra decorativa flotante */
+.owner-photo-deco {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  font-size: 14rem;
+  font-weight: 900;
+  color: #f7d389;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+  opacity: 0.55;
+  user-select: none;
+}
+
+/* Contenido texto */
+.owner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.owner-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b88a1a;
+  background: rgba(247, 211, 137, 0.3);
+  border: 1px solid rgba(247, 211, 137, 0.6);
+  padding: 6px 16px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.owner-name {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #1a1208;
+  margin: 0;
+}
+
+.owner-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-left: 3px solid #f7d389;
+  padding-left: 28px;
+  margin-top: 8px;
+}
+
+.owner-bio p {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.75;
+  color: #5a4a30;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Badge cumpleaños */
+.owner-birthday-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 2px solid #f7d389;
+  border-radius: 14px;
+  padding: 14px 22px;
+  width: fit-content;
+  box-shadow: 0 4px 20px rgba(247, 211, 137, 0.35);
+  transform: rotate(-3deg);
+  margin-top: 8px;
+}
+
+.badge-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.badge-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3d2c1e;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive owner */
+@media (max-width: 1024px) {
+  .owner-inner {
+    grid-template-columns: 340px 1fr;
+    gap: 60px;
+  }
+  .owner-photo-deco {
+    font-size: 10rem;
+    bottom: -20px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .owner-section-new {
+    padding: 80px 5%;
+  }
+  .owner-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .owner-photo-frame {
+    aspect-ratio: 4/3;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .owner-photo-deco {
+    font-size: 8rem;
+    bottom: -15px;
+    right: -10px;
+  }
+  .owner-name {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .owner-section-new {
+    padding: 60px 5%;
+  }
+  .owner-name {
+    font-size: 2.8rem;
+  }
+  .owner-photo-deco {
+    font-size: 6rem;
+    right: -5px;
+  }
+  .owner-bio {
+    padding-left: 20px;
+  }
+  
+  .owner-photo {
+    object-position: center bottom;
+  }
+}
+
 /* Valores Section - Mejorado */
 .nosotros-valores-section {
   min-height: 100vh;
@@ -349,7 +581,7 @@
   letter-spacing: -0.01em;
 }
 
-/* Responsive */
+/* Responsive general */
 @media (max-width: 1200px) {
   .valores-grid {
     grid-template-columns: repeat(2, 1fr);
